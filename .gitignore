@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+data/live_telemetry.csv
+
+# Virtual environment
+venv/
+.env
+.venv/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Python cache
+.pytest_cache/
+
+# Temporary files
+*.tmp
+*.log
+
+# Jupyter
+.ipynb_checkpoints/k__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.env
+.venv/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Python cache
+.pytest_cache/
+
+# Temporary files
+*.tmp
+*.log
+
+# Jupyter
+.ipynb_checkpoints/

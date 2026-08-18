@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.env
+.venv/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Python cache
+.pytest_cache/
+
+# Temporary files
+*.tmp
+*.log
+
+# Jupyterkk
+.ipynb_checkpoints/
+.gitignore.gitignore.gitignore
