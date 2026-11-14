@@ -1,157 +1,162 @@
-# 🛰️ AI-Based Spacecraft Health Monitoring System
+🛰️ AI-Based Spacecraft Health Monitoring System
 
-An AI-powered telemetry monitoring system that collects real-time sensor data from an ESP8266-based hardware prototype and uses a Machine Learning model to classify spacecraft health into:
+An AI-powered spacecraft health monitoring prototype that combines an ESP8266 NodeMCU, real-time sensor telemetry, a Random Forest classifier, and a Streamlit dashboard.
 
-- 🟢 HEALTHY
-- 🟡 WARNING
-- 🔴 CRITICAL
+The system classifies telemetry-based health conditions into three categories:
 
-The system combines embedded hardware, real-time telemetry, data logging, and a Random Forest machine-learning model into a single spacecraft health-monitoring pipeline.
+🟢 HEALTHY | 🟡 WARNING | 🔴 CRITICAL
 
----
+⚠️ Note: This is an experimental, ground-based research prototype. It is trained on synthetic data and has not been validated on real spacecraft telemetry.
 
-## 🚀 Project Overview
+📸 Hardware Implementation
 
-Spacecraft operate in harsh environments where continuous monitoring of onboard systems is essential.
+Hardware setup
 
-This project demonstrates a prototype spacecraft health-monitoring system capable of:
+ESP8266-based sensor interfacing and hardware testing.
 
-1. Collecting sensor telemetry from an ESP8266.
-2. Reading temperature and humidity.
-3. Detecting light conditions.
-4. Measuring acceleration.
-5. Measuring angular velocity.
-6. Transmitting telemetry through serial communication.
-7. Feeding sensor data into a Machine Learning model.
-8. Predicting spacecraft health.
-9. Calculating prediction confidence.
-10. Saving live telemetry for analysis.
-11. Displaying the system through a Streamlit dashboard.
+Components
+Component	Function
+ESP8266 NodeMCU	Main controller
+DHT11	Temperature and humidity
+MPU-6500	Accelerometer and gyroscope
+HW-072	Light detection
+Wiring
+Sensor	Sensor Pin	NodeMCU Pin
+DHT11	DATA	TODO (e.g. D4)
+MPU-6500	SDA	TODO (e.g. D2)
+MPU-6500	SCL	TODO (e.g. D1)
+HW-072	AO / DO	TODO (e.g. A0)
+All	VCC / GND	3V3 / GND
+📊 Live Monitoring Dashboard
 
----
+Dashboard
 
-## 🧠 Artificial Intelligence
+The Streamlit dashboard displays:
 
-The project uses a **Random Forest Classifier** for spacecraft health classification.
+ESP8266 connection status
+Live sensor telemetry
+AI health classification
+Prediction confidence
+Accelerometer and gyroscope readings
+Real-time sensor trends
 
-### Health Classes
+Sensor data visualization
 
-| Class | Meaning |
-|---|---|
-| HEALTHY | Spacecraft parameters are within the learned normal range |
-| WARNING | Parameters indicate an abnormal condition |
-| CRITICAL | Parameters indicate a severe abnormal condition |
+🧠 Machine Learning
+Algorithm: Random Forest Classifier
+Dataset: 3,000 synthetic telemetry samples, generated using separate value ranges for each health class
+Input Features
+Feature	Source
+Temperature	DHT11
+Humidity	DHT11
+Acceleration (ax, ay, az)	MPU-6500
+Gyroscope (gx, gy, gz)	MPU-6500
+Light intensity	HW-072
+Dataset Distribution
+Health Class	Samples
+HEALTHY	1,000
+WARNING	1,000
+CRITICAL	1,000
+Total	3,000
+Model Performance
+Metric	Value
+Training samples	2,400
+Testing samples	600
+Train-test split	80:20
+Test accuracy	100%
+5-fold CV accuracy	TODO
 
-The training dataset contains:
+The 100% accuracy is expected because the synthetic classes were generated with well-separated feature ranges, which makes them easy to classify. It reflects performance on the synthetic test set only and does not represent performance on real spacecraft telemetry.
 
-- 1000 HEALTHY samples
-- 1000 WARNING samples
-- 1000 CRITICAL samples
 
-**Total: 3000 samples**
 
----
+⚙️ System Architecture
+DHT11 + MPU-6500 +HW-072
+ESP8266 NodeMCU
+Serial Communication
+Python Processing
+Random Forest Classifier
+HEALTHY / WARNING /CRITICAL
+Streamlit Dashboard
 
-## 📊 Machine Learning Results
+📁 Project Structure
+text
+AI-SPACECRAFT-HEALTH-MONITOR/
+├── firmware/            # ESP8266 Arduino code (TODO: folder/file name)
+├── data/                # Synthetic dataset (TODO)
+├── model/               # Trained model (.joblib) (TODO)
+├── train_model.py       # Model training script (TODO)
+├── app.py               # Streamlit dashboard (TODO)
+├── images/              # README images
+├── requirements.txt
+└── README.md
+🚀 Getting Started
+1. Clone the repository
+bash
+git clone https://github.com/D555hruv/AI-SPACECRAFT-HEALTH-MONITOR.git
+cd AI-SPACECRAFT-HEALTH-MONITOR
+2. Install dependencies
+bash
+pip install -r requirements.txt
+3. Upload firmware to ESP8266
+Open the firmware sketch in Arduino IDE.
+Install the required libraries (DHT sensor library, MPU6500/MPU6050 library, etc.).
+Select board NodeMCU 1.0 (ESP-12E Module) and the correct COM port.
+Upload the sketch. Baud rate: TODO (e.g. 115200).
+4. Run the dashboard
 
-The Random Forest model was trained using:
+Set your COM port in the Python code (TODO: variable/file name), then run:
 
-- Training samples: 2400
-- Testing samples: 600
+bash
+streamlit run app.py
+💻 Technologies Used
 
-### Test Accuracy
+Python • Scikit-learn • Pandas • NumPy • Streamlit • Plotly • Joblib • ESP8266 • Embedded C/C++
 
-**100.00%**
+⚠️ Limitations
+Trained on synthetic data, not real spacecraft telemetry.
+DHT11 and MPU-6500 are hobby-grade sensors, not space-qualified.
+Ground-based prototype; no radiation, vacuum or thermal-cycling testing.
+Reported accuracy applies to the synthetic test set only.
+🚀 Future Scope
+Advanced anomaly detection
+Real-world telemetry dataset integration
+Fault detection and diagnostics
+Spacecraft digital twin development
+Extended hardware testing
 
-Classification results:
 
-| Class | Precision | Recall | F1-score |
-|---|---:|---:|---:|
-| CRITICAL | 1.00 | 1.00 | 1.00 |
-| HEALTHY | 1.00 | 1.00 | 1.00 |
-| WARNING | 1.00 | 1.00 | 1.00 |
+🔬 Research Publication
 
-The confusion matrix produced:
+AI-Based Spacecraft Health Monitoring System: A Machine Learning Approach for Telemetry-Based Health Classification
 
-```text
-[[200   0   0]
- [  0 200   0]
-# 🛰️ AI-Based Spacecraft Health Monitoring System
+Journal: Acceleron Aerospace Journal
+Volume / Issue: 7, Issue 1 (2026)
+Pages: 2007–2016
+DOI: 10.61359/11.2106-2631
 
-An AI-powered telemetry monitoring system that collects real-time sensor data from an ESP8266-based hardware prototype and uses a Machine Learning model to classify spacecraft health into:
+📄 Read the Published Research Paper
 
-- 🟢 HEALTHY
-- 🟡 WARNING
-- 🔴 CRITICAL
+How to Cite
+bibtex
+@article{sinha2026spacecraft,
+  author  = {Sinha, Dhruv},
+  title   = {AI-Based Spacecraft Health Monitoring System: A Machine Learning Approach for Telemetry-Based Health Classification},
+  journal = {Acceleron Aerospace Journal},
+  volume  = {7},
+  number  = {1},
+  pages   = {2007--2016},
+  year    = {2026},
+  doi     = {10.61359/11.2106-2631}
+}
 
-The system combines embedded hardware, real-time telemetry, data logging, and a Random Forest machine-learning model into a single spacecraft health-monitoring pipeline.
 
----
+👨‍💻 Author
 
-## 🚀 Project Overview
+Dhruv Sinha B.Tech – Electrical and Electronics Engineering Gaya College of Engineering, Bihar, India
 
-Spacecraft operate in harsh environments where continuous monitoring of onboard systems is essential.
+GitHub: D555hruv
+LinkedIn: Dhruv Sinha
+ORCID: 0009-0004-7097-2419
 
-This project demonstrates a prototype spacecraft health-monitoring system capable of:
-
-1. Collecting sensor telemetry from an ESP8266.
-2. Reading temperature and humidity.
-3. Detecting light conditions.
-4. Measuring acceleration.
-5. Measuring angular velocity.
-6. Transmitting telemetry through serial communication.
-7. Feeding sensor data into a Machine Learning model.
-8. Predicting spacecraft health.
-9. Calculating prediction confidence.
-10. Saving live telemetry for analysis.
-11. Displaying the system through a Streamlit dashboard.
-
----
-
-## 🧠 Artificial Intelligence
-
-The project uses a **Random Forest Classifier** for spacecraft health classification.
-
-### Health Classes
-
-| Class | Meaning |
-|---|---|
-| HEALTHY | Spacecraft parameters are within the learned normal range |
-| WARNING | Parameters indicate an abnormal condition |
-| CRITICAL | Parameters indicate a severe abnormal condition |
-
-The training dataset contains:
-
-- 1000 HEALTHY samples
-- 1000 WARNING samples
-- 1000 CRITICAL samples
-
-**Total: 3000 samples**
-
----
-
-## 📊 Machine Learning Results
-
-The Random Forest model was trained using:
-
-- Training samples: 2400
-- Testing samples: 600
-
-### Test Accuracy
-
-**100.00%**
-
-Classification results:
-
-| Class | Precision | Recall | F1-score |
-|---|---:|---:|---:|
-| CRITICAL | 1.00 | 1.00 | 1.00 |
-| HEALTHY | 1.00 | 1.00 | 1.00 |
-| WARNING | 1.00 | 1.00 | 1.00 |
-
-The confusion matrix produced:
-
-```text
-[[200   0   0]
- [  0 200   0]
- [  0   0 200]]
+An experimental research prototype exploring AI-driven spacecraft health monitoring through embedded systems and telemetry analysis. 🛰️
