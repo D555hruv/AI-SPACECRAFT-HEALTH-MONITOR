@@ -6,7 +6,7 @@
 ![ESP8266](https://img.shields.io/badge/Hardware-ESP8266%20NodeMCU-green)
 ![Status](https://img.shields.io/badge/Status-Research%20Prototype-lightgrey)
 
-![Spacecraft Health Dashboard](https://github.com/D555hruv/AI-SPACECRAFT-HEALTH-MONITOR/blob/b9e32c04cbb20d3654b7d788746a99b486361efc/images/Neatly%20Wired%20Spacecraft%20Health%20Dashboard.png)
+![Spacecraft Health Dashboard](https://github.com/D555hruv/AI-SPACECRAFT-HEALTH-MONITOR/blob/17053d35192b5ed0a6da50bd5e016c001e869675/images/Spacecraft%20Dashboard.png)
 An AI-powered spacecraft health monitoring prototype that combines an **ESP8266 NodeMCU**, multi-sensor telemetry acquisition, a **Random Forest** classifier, and a real-time **Streamlit** dashboard.
 
 The system analyzes sensor telemetry and classifies the estimated system health into three categories:
