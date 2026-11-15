@@ -1,6 +1,5 @@
-🛰️ AI-Based Spacecraft Health Monitoring System
-![image alt](https://github.com/D555hruv/AI-SPACECRAFT-HEALTH-MONITOR/blob/4c44a1d057e39ab0bf021792eb6acc091485e04d/%20Spacecraft%20Health%20Dashboard.png)
-
+# 🛰️ AI-Based Spacecraft Health Monitoring System
+![image alt](https://github.com/D555hruv/AI-SPACECRAFT-HEALTH-MONITOR/blob/53202b6f6a0896d501ebd83e3921e901edba2bbd/images/%20Spacecraft%20Health%20Dashboard.png)
 
 An AI-powered spacecraft health monitoring prototype that combines an ESP8266 NodeMCU, real-time sensor telemetry, a Random Forest classifier, and a Streamlit dashboard.
 
@@ -10,30 +9,31 @@ The system classifies telemetry-based health conditions into three categories:
 
 ⚠️ Note: This is an experimental, ground-based research prototype. It is trained on synthetic data and has not been validated on real spacecraft telemetry.
 
-📸 Hardware Implementation
-![image alt](https://github.com/D555hruv/AI-SPACECRAFT-HEALTH-MONITOR/blob/b0cf238ccc6194a45db459caca45b90853d293c9/Hardware.png)
+## 📸 Hardware Implementation
+![image alt](https://github.com/D555hruv/AI-SPACECRAFT-HEALTH-MONITOR/blob/53202b6f6a0896d501ebd83e3921e901edba2bbd/images/hardware-setup.png)
 
 Hardware setup
 
 ESP8266-based sensor interfacing and hardware testing.
 
-Components
+### Components
 Component	Function
 ESP8266 NodeMCU	Main controller
 DHT11	Temperature and humidity
 MPU-6500	Accelerometer and gyroscope
 HW-072	Light detection
-Wiring
+### Wiring
 Sensor	Sensor Pin	NodeMCU Pin
 DHT11	DATA	TODO (e.g. D4)
 MPU-6500	SDA	TODO (e.g. D2)
 MPU-6500	SCL	TODO (e.g. D1)
 HW-072	AO / DO	TODO (e.g. A0)
 All	VCC / GND	3V3 / GND
-📊 Live Monitoring Dashboard
+
+##📊 Live Monitoring Dashboard
 
 Dashboard
-![image alt](https://github.com/D555hruv/AI-SPACECRAFT-HEALTH-MONITOR/blob/4c44a1d057e39ab0bf021792eb6acc091485e04d/AI%20Spacecraft%20Health%20Dashboard.png)
+![image alt](https://github.com/D555hruv/AI-SPACECRAFT-HEALTH-MONITOR/blob/53202b6f6a0896d501ebd83e3921e901edba2bbd/images/dashboard.png)
 
 The Streamlit dashboard displays:
 
@@ -74,7 +74,7 @@ The 100% accuracy is expected because the synthetic classes were generated with 
 
 
 
-⚙️ System Architecture
+## ⚙️ System Architecture
 DHT11 + MPU-6500 +HW-072
 ESP8266 NodeMCU
 Serial Communication
@@ -83,8 +83,7 @@ Random Forest Classifier
 HEALTHY / WARNING /CRITICAL
 Streamlit Dashboard
 
-📁 Project Structure
-text
+
 ## 📁 Project Structure
 
 ```text
@@ -112,7 +111,9 @@ AI-SPACECRAFT-HEALTH-MONITOR/
 ├── .gitignore                   # Git ignore configuration
 └── README.md                    # Project documentation
 ```
-🚀 Getting Started
+
+## 🚀 Getting Started
+
 1. Clone the repository
 bash
 git clone https://github.com/D555hruv/AI-SPACECRAFT-HEALTH-MONITOR.git
@@ -131,16 +132,17 @@ Set your COM port in the Python code (TODO: variable/file name), then run:
 
 bash
 streamlit run app.py
-💻 Technologies Used
+
+## 💻 Technologies Used
 
 Python • Scikit-learn • Pandas • NumPy • Streamlit • Plotly • Joblib • ESP8266 • Embedded C/C++
 
-⚠️ Limitations
+## ⚠️ Limitations
 Trained on synthetic data, not real spacecraft telemetry.
 DHT11 and MPU-6500 are hobby-grade sensors, not space-qualified.
 Ground-based prototype; no radiation, vacuum or thermal-cycling testing.
 Reported accuracy applies to the synthetic test set only.
-🚀 Future Scope
+## 🚀 Future Scope
 Advanced anomaly detection
 Real-world telemetry dataset integration
 Fault detection and diagnostics
@@ -148,7 +150,7 @@ Spacecraft digital twin development
 Extended hardware testing
 
 
-🔬 Research Publication
+# 🔬 Research Publication
 
 AI-Based Spacecraft Health Monitoring System: A Machine Learning Approach for Telemetry-Based Health Classification
 
