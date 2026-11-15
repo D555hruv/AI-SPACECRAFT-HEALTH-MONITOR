@@ -1,4 +1,6 @@
 🛰️ AI-Based Spacecraft Health Monitoring System
+https://github.com/D555hruv/AI-SPACECRAFT-HEALTH-MONITOR/blob/4c44a1d057e39ab0bf021792eb6acc091485e04d/%20Spacecraft%20Health%20Dashboard.png
+
 
 An AI-powered spacecraft health monitoring prototype that combines an ESP8266 NodeMCU, real-time sensor telemetry, a Random Forest classifier, and a Streamlit dashboard.
 
