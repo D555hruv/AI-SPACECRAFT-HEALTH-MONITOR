@@ -22,14 +22,17 @@ ESP8266 NodeMCU	Main controller
 DHT11	Temperature and humidity
 MPU-6500	Accelerometer and gyroscope
 HW-072	Light detection
-### Wiring
-Sensor	Sensor Pin	NodeMCU Pin
-DHT11	DATA	TODO (e.g. D4)
-MPU-6500	SDA	TODO (e.g. D2)
-MPU-6500	SCL	TODO (e.g. D1)
-HW-072	AO / DO	TODO (e.g. A0)
-All	VCC / GND	3V3 / GND
 
+### Wiring
+Sensor	           Sensor Pin	       NodeMCU Pin
+DHT11	               DATA	              D6
+MPU-6500	           SDA	              D2
+MPU-6500	           SCL	              D1
+HW-072	             DO                 D3
+Rest All	           VCC                3V3
+                     Gnd                Gnd
+
+                     
 ##📊 Live Monitoring Dashboard
 
 Dashboard
@@ -68,7 +71,7 @@ Training samples	2,400
 Testing samples	600
 Train-test split	80:20
 Test accuracy	100%
-5-fold CV accuracy	TODO
+
 
 The 100% accuracy is expected because the synthetic classes were generated with well-separated feature ranges, which makes them easy to classify. It reflects performance on the synthetic test set only and does not represent performance on real spacecraft telemetry.
 
@@ -142,6 +145,7 @@ Trained on synthetic data, not real spacecraft telemetry.
 DHT11 and MPU-6500 are hobby-grade sensors, not space-qualified.
 Ground-based prototype; no radiation, vacuum or thermal-cycling testing.
 Reported accuracy applies to the synthetic test set only.
+
 ## 🚀 Future Scope
 Advanced anomaly detection
 Real-world telemetry dataset integration
