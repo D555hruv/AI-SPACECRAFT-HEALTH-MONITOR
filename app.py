@@ -283,9 +283,9 @@ else:
     with c3:
 
         light_text = (
-            "Detected"
+            "Not Detected"
             if data["light"] == 1
-            else "Not Detected"
+            else "Detected"
         )
 
         st.metric(
