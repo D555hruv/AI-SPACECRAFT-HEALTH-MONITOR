@@ -11,6 +11,7 @@ The system classifies telemetry-based health conditions into three categories:
 ⚠️ Note: This is an experimental, ground-based research prototype. It is trained on synthetic data and has not been validated on real spacecraft telemetry.
 
 📸 Hardware Implementation
+https://github.com/D555hruv/AI-SPACECRAFT-HEALTH-MONITOR/blob/b0cf238ccc6194a45db459caca45b90853d293c9/Hardware.png
 
 Hardware setup
 
@@ -32,6 +33,7 @@ All	VCC / GND	3V3 / GND
 📊 Live Monitoring Dashboard
 
 Dashboard
+https://github.com/D555hruv/AI-SPACECRAFT-HEALTH-MONITOR/blob/4c44a1d057e39ab0bf021792eb6acc091485e04d/AI%20Spacecraft%20Health%20Dashboard.png
 
 The Streamlit dashboard displays:
 
@@ -152,6 +154,7 @@ bibtex
   doi     = {10.61359/11.2106-2631}
 }
 
+Link to the Reasearch paper:- https://acceleron.org.in/index.php/aaj/article/view/379
 
 👨‍💻 Author
 
