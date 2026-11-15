@@ -1,5 +1,5 @@
 🛰️ AI-Based Spacecraft Health Monitoring System
-https://github.com/D555hruv/AI-SPACECRAFT-HEALTH-MONITOR/blob/4c44a1d057e39ab0bf021792eb6acc091485e04d/%20Spacecraft%20Health%20Dashboard.png
+![image alt](https://github.com/D555hruv/AI-SPACECRAFT-HEALTH-MONITOR/blob/4c44a1d057e39ab0bf021792eb6acc091485e04d/%20Spacecraft%20Health%20Dashboard.png)
 
 
 An AI-powered spacecraft health monitoring prototype that combines an ESP8266 NodeMCU, real-time sensor telemetry, a Random Forest classifier, and a Streamlit dashboard.
@@ -11,7 +11,7 @@ The system classifies telemetry-based health conditions into three categories:
 ⚠️ Note: This is an experimental, ground-based research prototype. It is trained on synthetic data and has not been validated on real spacecraft telemetry.
 
 📸 Hardware Implementation
-https://github.com/D555hruv/AI-SPACECRAFT-HEALTH-MONITOR/blob/b0cf238ccc6194a45db459caca45b90853d293c9/Hardware.png
+![image alt](https://github.com/D555hruv/AI-SPACECRAFT-HEALTH-MONITOR/blob/b0cf238ccc6194a45db459caca45b90853d293c9/Hardware.png)
 
 Hardware setup
 
@@ -33,7 +33,7 @@ All	VCC / GND	3V3 / GND
 📊 Live Monitoring Dashboard
 
 Dashboard
-https://github.com/D555hruv/AI-SPACECRAFT-HEALTH-MONITOR/blob/4c44a1d057e39ab0bf021792eb6acc091485e04d/AI%20Spacecraft%20Health%20Dashboard.png
+![image alt](https://github.com/D555hruv/AI-SPACECRAFT-HEALTH-MONITOR/blob/4c44a1d057e39ab0bf021792eb6acc091485e04d/AI%20Spacecraft%20Health%20Dashboard.png)
 
 The Streamlit dashboard displays:
 
@@ -85,15 +85,33 @@ Streamlit Dashboard
 
 📁 Project Structure
 text
+## 📁 Project Structure
+
+```text
 AI-SPACECRAFT-HEALTH-MONITOR/
-├── firmware/            # ESP8266 Arduino code (TODO: folder/file name)
-├── data/                # Synthetic dataset (TODO)
-├── model/               # Trained model (.joblib) (TODO)
-├── train_model.py       # Model training script (TODO)
-├── app.py               # Streamlit dashboard (TODO)
-├── images/              # README images
-├── requirements.txt
-└── README.md
+│
+├── data/                       # Synthetic telemetry dataset
+│
+├── models/                     # Trained machine learning models
+│
+├── images/                     # Project photographs and screenshots
+│   ├── hardware-setup.png      # Actual hardware implementation
+│   ├── dashboard.png           # Live monitoring dashboard
+│   └── hardware-demo.png       # Additional hardware demonstration
+│
+├── app.py                      # Streamlit dashboard
+├── generate_dataset.py         # Synthetic dataset generation
+├── live_monitor.py              # Live sensor monitoring
+├── serial_reader.py             # ESP8266 serial communication
+├── train_model.py               # Random Forest model training
+│
+├── test_live_ai.py              # Live AI testing
+├── test_model.py                # ML model testing
+│
+├── requirements.txt             # Python dependencies
+├── .gitignore                   # Git ignore configuration
+└── README.md                    # Project documentation
+```
 🚀 Getting Started
 1. Clone the repository
 bash
@@ -154,7 +172,7 @@ bibtex
   doi     = {10.61359/11.2106-2631}
 }
 
-Link to the Reasearch paper:- https://acceleron.org.in/index.php/aaj/article/view/379
+[Link to the Reasearch paper](https://acceleron.org.in/index.php/aaj/article/view/379)
 
 👨‍💻 Author
 
